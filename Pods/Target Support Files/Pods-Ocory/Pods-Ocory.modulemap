@@ -1,0 +1,6 @@
+framework module Pods_Ocory {
+  umbrella header "Pods-Ocory-umbrella.h"
+
+  export *
+  module * { export * }
+}

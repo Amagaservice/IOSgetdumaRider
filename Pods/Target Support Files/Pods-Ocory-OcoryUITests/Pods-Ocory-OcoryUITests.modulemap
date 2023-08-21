@@ -1,0 +1,6 @@
+framework module Pods_Ocory_OcoryUITests {
+  umbrella header "Pods-Ocory-OcoryUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

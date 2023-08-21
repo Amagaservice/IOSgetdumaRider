@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PaymentVCCell" rowHeight="127" id="KGk-i7-Jjw" customClass="PaymentVCCell" customModule="Ocory" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="127"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="363" height="127"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQD-Lz-t7v">
+                        <rect key="frame" x="10" y="10" width="343" height="107"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vsd-Ta-eyN" customClass="SetButton" customModule="Ocory" customModuleProvider="target">
+                                <rect key="frame" x="20" y="46" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="9eY-ob-2WA"/>
+                                    <constraint firstAttribute="height" constant="20" id="Kwc-gp-JGO"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="uncheck">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected" image="check"/>
+                                <connections>
+                                    <action selector="checkBoxBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3Wf-Go-0Nw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12** **** **** 3695" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neQ-oB-AHq">
+                                <rect key="frame" x="60" y="46.5" width="253" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" name="green"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDX-Vb-jx3">
+                                <rect key="frame" x="20" y="88.5" width="120" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="c8K-H2-1zz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxG-Pb-Ylb">
+                                <rect key="frame" x="20" y="73" width="120" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="lM6-si-wvR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Expiry" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RW-9R-SU0">
+                                <rect key="frame" x="190" y="88.5" width="68.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Expiry:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q22-km-KbL">
+                                <rect key="frame" x="190" y="73" width="69" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMM-gF-Ttz" customClass="SetButton" customModule="Ocory" customModuleProvider="target">
+                                <rect key="frame" x="305" y="10.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="Chg-uI-Fsq"/>
+                                    <constraint firstAttribute="height" constant="25" id="qGq-wR-BGN"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="delete">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected" image="check"/>
+                                <connections>
+                                    <action selector="actionDropDown:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zfs-QC-Sip"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeF-7L-4LF">
+                                <rect key="frame" x="245" y="10" width="50" height="26"/>
+                                <color key="backgroundColor" name="app_theme"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="NJi-C9-vsi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                <state key="normal" title="Default">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card chip-2" translatesAutoresizingMaskIntoConstraints="NO" id="jFp-Iw-8TJ">
+                                <rect key="frame" x="20" y="8.5" width="33" height="29"/>
+                                <color key="tintColor" name="app_theme"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="9Y0-nh-RnC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YxG-Pb-Ylb" firstAttribute="leading" secondItem="YDX-Vb-jx3" secondAttribute="leading" id="2Qv-zd-K33"/>
+                            <constraint firstItem="neQ-oB-AHq" firstAttribute="leading" secondItem="Vsd-Ta-eyN" secondAttribute="trailing" constant="20" id="31c-4B-959"/>
+                            <constraint firstItem="YDX-Vb-jx3" firstAttribute="leading" secondItem="Vsd-Ta-eyN" secondAttribute="leading" id="5oF-ka-YTB"/>
+                            <constraint firstItem="JeF-7L-4LF" firstAttribute="top" secondItem="zQD-Lz-t7v" secondAttribute="top" constant="10" id="6K8-0Y-Z6b"/>
+                            <constraint firstAttribute="trailing" secondItem="SMM-gF-Ttz" secondAttribute="trailing" constant="13" id="AOf-VJ-Go9"/>
+                            <constraint firstItem="SMM-gF-Ttz" firstAttribute="leading" secondItem="JeF-7L-4LF" secondAttribute="trailing" constant="10" id="ASU-nt-4uW"/>
+                            <constraint firstItem="3RW-9R-SU0" firstAttribute="top" secondItem="YDX-Vb-jx3" secondAttribute="top" id="AZg-uo-BWU"/>
+                            <constraint firstItem="neQ-oB-AHq" firstAttribute="centerY" secondItem="Vsd-Ta-eyN" secondAttribute="centerY" id="EQo-8i-Lff"/>
+                            <constraint firstItem="YxG-Pb-Ylb" firstAttribute="top" secondItem="Vsd-Ta-eyN" secondAttribute="bottom" constant="7" id="FUt-qV-eBo"/>
+                            <constraint firstItem="YDX-Vb-jx3" firstAttribute="top" secondItem="YxG-Pb-Ylb" secondAttribute="bottom" constant="1" id="Kez-46-cJZ"/>
+                            <constraint firstItem="SMM-gF-Ttz" firstAttribute="centerY" secondItem="JeF-7L-4LF" secondAttribute="centerY" id="LQM-Z4-Vr1"/>
+                            <constraint firstItem="3RW-9R-SU0" firstAttribute="leading" secondItem="YDX-Vb-jx3" secondAttribute="trailing" constant="50" id="RDf-fA-k7z"/>
+                            <constraint firstItem="q22-km-KbL" firstAttribute="leading" secondItem="3RW-9R-SU0" secondAttribute="leading" id="YY9-0D-m4I"/>
+                            <constraint firstItem="q22-km-KbL" firstAttribute="top" secondItem="YxG-Pb-Ylb" secondAttribute="top" id="dQH-dj-rcd"/>
+                            <constraint firstItem="jFp-Iw-8TJ" firstAttribute="centerY" secondItem="JeF-7L-4LF" secondAttribute="centerY" id="eiL-SH-xuS"/>
+                            <constraint firstItem="Vsd-Ta-eyN" firstAttribute="leading" secondItem="zQD-Lz-t7v" secondAttribute="leading" constant="20" id="ekn-Ov-Hhy"/>
+                            <constraint firstItem="Vsd-Ta-eyN" firstAttribute="centerY" secondItem="zQD-Lz-t7v" secondAttribute="centerY" constant="2.5" id="epo-rd-tpa"/>
+                            <constraint firstAttribute="trailing" secondItem="neQ-oB-AHq" secondAttribute="trailing" constant="30" id="fUd-3C-IjA"/>
+                            <constraint firstItem="jFp-Iw-8TJ" firstAttribute="leading" secondItem="Vsd-Ta-eyN" secondAttribute="leading" id="wia-rL-ugD"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="zQD-Lz-t7v" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="4md-N0-C52"/>
+                    <constraint firstAttribute="trailing" secondItem="zQD-Lz-t7v" secondAttribute="trailing" constant="10" id="UWX-sz-uEa"/>
+                    <constraint firstAttribute="bottom" secondItem="zQD-Lz-t7v" secondAttribute="bottom" constant="10" id="bCy-AN-mLY"/>
+                    <constraint firstItem="zQD-Lz-t7v" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="n33-Ih-cDX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="checkBtn" destination="Vsd-Ta-eyN" id="06R-Bh-khp"/>
+                <outlet property="defaultBtn" destination="JeF-7L-4LF" id="WQs-qH-PdK"/>
+                <outlet property="deleteBtn" destination="SMM-gF-Ttz" id="ARr-om-a2f"/>
+                <outlet property="expiryLbl" destination="3RW-9R-SU0" id="OU3-k1-n7i"/>
+                <outlet property="nameLbl" destination="YDX-Vb-jx3" id="bQs-so-2se"/>
+                <outlet property="numberLbl" destination="neQ-oB-AHq" id="2YF-C6-2NN"/>
+            </connections>
+            <point key="canvasLocation" x="163.04347826086959" y="128.23660714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="card chip-2" width="29" height="29"/>
+        <image name="check" width="24" height="24"/>
+        <image name="delete" width="12" height="12"/>
+        <image name="uncheck" width="24" height="24"/>
+        <namedColor name="app_theme">
+            <color red="0.50588235294117645" green="0.74117647058823533" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="green">
+            <color red="0.2627450980392157" green="0.62352941176470589" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

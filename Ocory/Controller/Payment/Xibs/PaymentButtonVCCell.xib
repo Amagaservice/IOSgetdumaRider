@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaymentButtonVCCell" rowHeight="102" id="KGk-i7-Jjw" customClass="PaymentButtonVCCell" customModule="Ocory" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="352" height="102"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MzN-GW-BHP">
+                        <rect key="frame" x="10" y="10" width="332" height="82"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mlg-ME-a5g">
+                                <rect key="frame" x="5" y="5" width="322" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6x-zf-xUH" customClass="SetButton" customModule="Ocory" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="322" height="31"/>
+                                        <color key="backgroundColor" name="green"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <state key="normal" title="Make Payment">
+                                            <color key="titleColor" name="white"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="CornRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phq-d9-eeP" customClass="SetButton" customModule="Ocory" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="41" width="322" height="31"/>
+                                        <color key="backgroundColor" name="green"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <state key="normal" title="Add New Card">
+                                            <color key="titleColor" name="white"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="CornRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mlg-ME-a5g" firstAttribute="leading" secondItem="MzN-GW-BHP" secondAttribute="leading" constant="5" id="7a6-Ln-UjQ"/>
+                            <constraint firstAttribute="bottom" secondItem="mlg-ME-a5g" secondAttribute="bottom" constant="5" id="UQj-UD-eMm"/>
+                            <constraint firstAttribute="trailing" secondItem="mlg-ME-a5g" secondAttribute="trailing" constant="5" id="kaK-zx-2tn"/>
+                            <constraint firstItem="mlg-ME-a5g" firstAttribute="top" secondItem="MzN-GW-BHP" secondAttribute="top" constant="5" id="wFI-0k-YhP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="MzN-GW-BHP" secondAttribute="bottom" constant="10" id="IaQ-nY-DuD"/>
+                    <constraint firstItem="MzN-GW-BHP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="QdM-bm-pB1"/>
+                    <constraint firstAttribute="trailing" secondItem="MzN-GW-BHP" secondAttribute="trailing" constant="10" id="WQC-an-Dyi"/>
+                    <constraint firstItem="MzN-GW-BHP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="diP-2J-xsR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="addCardBtn" destination="phq-d9-eeP" id="jE7-dp-ncb"/>
+                <outlet property="paymentBtn" destination="U6x-zf-xUH" id="5h3-mK-WSW"/>
+            </connections>
+            <point key="canvasLocation" x="155.07246376811597" y="119.86607142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="green">
+            <color red="0.2627450980392157" green="0.62352941176470589" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
