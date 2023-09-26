@@ -38,7 +38,7 @@ extension PaymentVC {
         let param = ["ride_id":rideId,"tip_amount":amount ,"card_id" : card_id]
         print(param)
         Indicator.shared.showProgressView(self.view)
-        let urlString = "https://www.getduma.com/pay_tip_amount"
+        let urlString = "\(baseURL)pay_tip_amount"
         let url = URL.init(string: urlString)
         print(urlString)
         var headers: HTTPHeaders = [:]
@@ -83,7 +83,7 @@ extension PaymentVC {
         let param = ["ride_id":rideId,"amount":amount ,"card_id" : card_id]
         print(param)
         Indicator.shared.showProgressView(self.view)
-        let urlString = "https://www.getduma.com/payment"
+        let urlString = "\(baseURL)payment"
         let url = URL.init(string: urlString)
         var headers: HTTPHeaders = [:]
         headers = ["Authorization" : "Bearer " + (UserDefaults.standard.value(forKey: "token") as? String ?? "")

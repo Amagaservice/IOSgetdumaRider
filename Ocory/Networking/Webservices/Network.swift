@@ -13,13 +13,12 @@ enum methodType {
     case POST,GET
 }
 
-var baseURL = "https://www.getduma.com/"
-//var baseURL = "https://staging.getduma.com/"
+//var baseURL = "https://www.getduma.com/"
+var baseURL = "https://staging.getduma.com/"
 var imgURL = "https://promatics.xyz/azy/public/images/product/"
 var profileImg = "https://promatics.xyz/azy/public/images/profile/"
 
 //"http://13.233.185.124/azy/public/images/product/"
-
 var chatImgUrl = ""
 var pdfURL = ""
 

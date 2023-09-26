@@ -342,7 +342,7 @@ extension HomeViewController: UITableViewDataSource{
         let cc = NSUSERDEFAULT.value(forKey: kownCcode)
         let mobile =  NSUSERDEFAULT.value(forKey: kownMobile)
         let requestParams: [String: Any] = ["Caller": mobile ?? "", "country_code" : cc ?? ""]
-        let urlString = "https://www.getduma.com/twilio/forward_call"
+        let urlString = "\(baseURL)twilio/forward_call"
         let url = URL.init(string: urlString)
         print(url)
         print(requestParams)

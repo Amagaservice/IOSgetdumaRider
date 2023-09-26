@@ -70,7 +70,7 @@ extension ProfileViewController{
                 print("KEY VALUE DATA===========\(p.key)"=="-----+++++----\(p.value)")
             }
         },
-        to: "https://www.getduma.com/update_profile_of_user", method: .post , headers: headers )
+        to: "\(baseURL)update_profile_of_user", method: .post , headers: headers )
         .responseJSON(completionHandler: { (data) in
             let d = data.value
             let value = (d as? [String:Any] ?? [:])
@@ -101,7 +101,7 @@ extension ProfileViewController{
                 multiPart.append("\(p.value)".data(using: String.Encoding.utf8)!, withName: p.key)
             }
             multiPart.append(imageData!, withName: "profile_pic", fileName: "profile_pic.jpg", mimeType: "image/jpg")
-        }, to: "https://www.getduma.com/upload_profile_pic", method: .post, headers: headers) .uploadProgress(queue: .main, closure: { progress in
+        }, to: "\(baseURL)upload_profile_pic", method: .post, headers: headers) .uploadProgress(queue: .main, closure: { progress in
             print("Upload Progress: \(progress.fractionCompleted)")
         }).responseJSON(completionHandler: { data in
             print("upload finished: \(data)")
@@ -133,7 +133,7 @@ extension ProfileViewController{
     func uploadPhotoGallaryNew(media: UIImage, params: [String:Any]){
         let imageData = media.jpegData(compressionQuality: 0.20)
               print("image data\(String(describing: imageData))")
-        let url = URL(string: "https://www.getduma.com/upload_profile_pic")!
+        let url = URL(string: "\(baseURL)upload_profile_pic")!
         let headers: HTTPHeaders = [
            // "Content-type": "multipart/form-data",
             "Accept": "application/json",
@@ -181,7 +181,7 @@ extension ProfileViewController{
     func uploadPhotoGallaryNewSignup(imageData: UIImage , params: [String:Any]){
         let imageData = imageData.jpegData(compressionQuality: 0.20)
               print("image data\(String(describing: imageData))")
-        let url = URL(string: "https://www.getduma.com/upload_verification_id")!
+        let url = URL(string: "\(baseURL)upload_verification_id")!
         let headers: HTTPHeaders = [
            // "Content-type": "multipart/form-data",
             "Accept": "application/json",

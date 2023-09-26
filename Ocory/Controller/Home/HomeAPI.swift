@@ -47,15 +47,13 @@ extension HomeViewController{
         print(param)
         
         Indicator.shared.showProgressView(self.view)
-        let urlString = "https://www.getduma.com/getVehicleType"
+        let urlString = "\(baseURL)getVehicleType"
         let url = URL.init(string: urlString)
         var headers: HTTPHeaders = [:]
         headers = ["Authorization" : "Bearer " + (UserDefaults.standard.value(forKey: "token") as? String ?? "")
         ]
-        
         print(headers)
         print(param)
-
         AF.request(urlString, method: .post, parameters: param, encoding: URLEncoding.default, headers: headers)
             .responseString { response in
                 print("responseString: \(response)")
@@ -218,7 +216,7 @@ extension HomeViewController{
                                         
         ] as  [String : Any]
         print(param)
-        let urlString = "https://www.getduma.com/postRideToDriver"
+        let urlString = "\(baseURL)postRideToDriver"
         let url = URL.init(string: urlString)
         var headers: HTTPHeaders = [:]
         headers = ["Authorization" : "Bearer " + (UserDefaults.standard.value(forKey: "token") as? String ?? "")
@@ -913,7 +911,7 @@ extension HomeViewController {
         let param = ["ride_id":rideId,"amount":amount ,"card_id" : card_id]
         print(param)
         Indicator.shared.showProgressView(self.view)
-        let urlString = "https://www.getduma.com/payment"
+        let urlString = "\(baseURL)payment"
         let url = URL.init(string: urlString)
         var headers: HTTPHeaders = [:]
         headers = ["Authorization" : "Bearer " + (UserDefaults.standard.value(forKey: "token") as? String ?? "")

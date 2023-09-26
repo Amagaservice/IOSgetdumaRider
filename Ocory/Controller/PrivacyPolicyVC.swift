@@ -11,10 +11,13 @@ import WebKit
 class PrivacyPolicyVC: UIViewController, WKUIDelegate, WKNavigationDelegate  {
     var webView: WKWebView!
 
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavButton()
-        let myURL = URL(string:"https://www.getduma.com/privacy-policy")
+        let myURL = URL(string:"\(baseURL)privacy-policy")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
 

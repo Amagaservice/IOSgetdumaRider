@@ -445,16 +445,12 @@ extension SignUpViewController{
     
     func uploadPhotoGallaryNewSignup(media: UIImage ,mediaLicense: UIImage ){
         
-        let params = ["email":self.emailAddress_txtField.text!, "name":self.name_txtField.text!, "country_code": mCountryTF.text ?? "" , "mobile": self.mobileNo_txtField.text!,"password":self.password_txtField.text!,"utype":1,"country":"","city":"","state":"","latitude":kCurrentLocaLat,"longitude":kCurrentLocaLong , "gcm_token" :  NSUSERDEFAULT.value(forKey: kFcmToken) as? String ?? "" ,
-            "dob" : dOBTF.text ?? "" ,
-            "home_address" : homeAddress.text ?? "" ,
-            "ssn" :SSNo_txtField.text ?? "" ,"identification_document_id" : selectedID,"identification_issue_date" : mIssueDateTF.text ?? "","identification_expiry_date": mExpirydateTF.text ?? ""
-        ] as [String : Any]
+        let params = ["email":self.emailAddress_txtField.text!, "name":self.name_txtField.text!, "country_code": mCountryTF.text ?? "" , "mobile": self.mobileNo_txtField.text!,"password":self.password_txtField.text!,"utype":1,"country":"","city":"","state":"","latitude":kCurrentLocaLat,"longitude":kCurrentLocaLong , "gcm_token" :  NSUSERDEFAULT.value(forKey: kFcmToken) as? String ?? "" , "dob" : dOBTF.text ?? "" , "home_address" : homeAddress.text ?? "" ,"ssn" :SSNo_txtField.text ?? "" ,"identification_document_id" : selectedID,"identification_issue_date" : mIssueDateTF.text ?? "","identification_expiry_date": mExpirydateTF.text ?? ""] as [String : Any]
         print(params)
         let imageData = media.jpegData(compressionQuality: 0.25)
         let imageDataLicence = mediaLicense.jpegData(compressionQuality: 0.25)
         print("image data\(String(describing: imageData))")
-        let url = URL(string: "https://www.getduma.com/register")!
+        let url = URL(string: "\(baseURL)register")!
 //        let headers: HTTPHeaders = [
 //           // "Content-type": "multipart/form-data",
 //            "Accept": "application/json",

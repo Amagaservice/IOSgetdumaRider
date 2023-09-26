@@ -280,7 +280,7 @@ extension HomeViewController : AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         print("Error while playing audio \(error!.localizedDescription)")
     }
     func requestForUpload( audioFilePath: URL , parameters : [String: Any] ) {
-        let url = URL(string: "https://www.getduma.com/audio_capture")!
+        let url = URL(string: "\(baseURL)audio_capture")!
         let headers: HTTPHeaders = [
             "Content-type": "multipart/form-data",
             "Accept": "application/json",
